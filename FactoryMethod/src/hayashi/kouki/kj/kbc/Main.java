@@ -2,17 +2,22 @@ package hayashi.kouki.kj.kbc;
 
 public class Main {
     public static void main(String[] args) {
+    	AbstractCreator create;
     	WindInstrumentProduct product;
+
     	System.out.println("サックス作成");
-    	product = new SaxopohneCreator().create();
-    	product.setPlate("さっちゃん");
+    	create = new SaxopohneCreator();
+    	create.setName("さっちゃん");
+    	product = create.create();
     	product.printPlate();
     	product.play();
 
     	System.out.println("");
 
     	System.out.println("トランペット作成");
-    	product = new TrumpetCreator().create();
+    	create = new SaxopohneCreator();
+    	create.setName("トラちん");
+    	product = create.create();
     	product.setPlate("トラちん");
     	product.printPlate();
     	product.play();
